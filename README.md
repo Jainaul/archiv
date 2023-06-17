@@ -16,7 +16,7 @@
 
    ![readme](./config/readme.png)
 
-2. 下载本程序并解压（注意文件路径不含中文）：[archiv.7z](https://gitee.com/Jainaul/archiv/repository/archive/master.zip)
+2. 下载本程序并解压（注意文件路径不含中文）：[archiv](https://gitee.com/Jainaul/archiv/repository/archive/main.zip)
 
 3. 安装模块：双击文件夹内的``00_Install.bat``自动安装模块（输入"y"确认安装）
 
