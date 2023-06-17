@@ -14,7 +14,7 @@
 
 1. 下载并安装[Anaconda3](https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/Anaconda3-2023.03-Windows-x86_64.exe)（ 安装时勾选下图选项），[Excle精灵](https://lestore.lenovo.com/detail/L105090)，[Office](https://www.microsoftstore.com.cn/software/office)
 
-   ![1687024631708](C:\Users\rcqed\Documents\WeChat Files\wxid_5hmfpjdd8r0312\FileStorage\Temp\1687024631708.png)
+   ![readme](./config/readme.png)
 
 2. 下载本程序并解压（注意文件路径不含中文）：[archiv.7z](https://gitee.com/Jainaul/archiv/repository/archive/master.zip)
 
