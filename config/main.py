@@ -1,44 +1,14 @@
-# archiv
+import tkinter as tk
+import webbrowser
+from PIL import Image, ImageTk
+import subprocess
 
-日喀则电力公司文件归档小助手
+def open_start_script(script_name):
+    subprocess.call(["python", script_name])
 
-## 主要功能
-
-1. 自动添加档案章，档案号和序号
-2. 自动添加卷内页码
-3. 自动生成卷册封面，目录，备考表
-4. 自动生成档案盒侧边贴条
-5. 自动生成资料交接单
-
-## 使用方法
-
-1. 下载[archiv](https://github.com/rcqed/archiv/releases)
-
-2. 将归档好的PDF文件放入``archiv``文件夹中，并按"档号__名字"的格式命名卷册名和文件名
-
-```
-目录结构如下：
-├─archiv
-   └─XXXXXX-XXXXXX-XX-XXXX-XXX__卷册名称1
-   │   ├─XXXXXX-XXXXXX-XX-XXXX-XXX-XXX__文件名1.pdf
-   │   ├─XXXXXX-XXXXXX-XX-XXXX-XXX-XXX__文件名2.pdf
-   └─XXXXXX-XXXXXX-XX-XXXX-XXX__卷册名称2
-       ├─XXXXXX-XXXXXX-XX-XXXX-XXX-XXX__文件名3.pdf
-       ├─XXXXXX-XXXXXX-XX-XXXX-XXX-XXX__文件名4.pdf
-```
-
-3. ``双击运行.bat``即可
-4. 输出文件在``output``目录下
-
-## 感谢
-
-Python库：openpyxl，PyPDF2--2.10.8，reportlab，pywin32，pyautogui
-
-软件：[WinPython](http://winpython.github.io/)，[Excle精灵](https://lestore.lenovo.com/detail/L105090)，[Office Excle](https://www.microsoftstore.com.cn/software/office)
-
-## 请作者喝奶茶
-
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="450px" height="613.42px" viewBox="0 0 1118 1524" enable-background="new 0 0 1118 1524" xml:space="preserve">  <image id="image0" width="1118" height="1524" x="0" y="0"
+def open_svg_image():
+    svg_code = '''
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="450px" height="613.42px" viewBox="0 0 1118 1524" enable-background="new 0 0 1118 1524" xml:space="preserve">  <image id="image0" width="1118" height="1524" x="0" y="0"
             href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABF4AAAX0CAYAAADwtM3DAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
         AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAA
         CXBIWXMAAB2GAAAdhgFdohOBAACAAElEQVR42uz9Wawk2Znnif2+c46Z+XK32DJyX5gks7gV91rI
@@ -6406,4 +6376,31 @@ Python库：openpyxl，PyPDF2--2.10.8，reportlab，pywin32，pyautogui
         YXRlOm1vZGlmeQAyMDIzLTA2LTI4VDA3OjE3OjExKzAwOjAwSra+XgAAACh0RVh0ZGF0ZTp0aW1l
         c3RhbXAAMjAyMy0wNi0yOFQwNzoxNzoxMSswMDowMB2jn4EAAAAASUVORK5CYII=" />
         </svg>
+    '''
+    with open('image.svg', 'w') as f:
+        f.write(svg_code)
+    webbrowser.open('image.svg')
 
+def open_website():
+    webbrowser.open("https://gitee.com/rcqed/archiv")
+
+root = tk.Tk()
+root.title("日喀则电力公司文件归档小助手v1.0")
+root.geometry("400x200")  # 设置窗口宽度和高度
+
+button1 = tk.Button(root, text="加档号页码", command=lambda: open_start_script("1-00_start.py"))
+button1.pack()
+
+button2 = tk.Button(root, text="生成VBA表格", command=lambda: open_start_script("2-00_start.py"))
+button2.pack()
+
+button3 = tk.Button(root, text="VBA自动转文档", command=lambda: open_start_script("3-00_start.py"))
+button3.pack()
+
+button4 = tk.Button(root, text="给作者买奶茶", command=open_svg_image)
+button4.pack()
+
+button5 = tk.Button(root, text="使用说明", command=open_website)
+button5.pack()
+
+root.mainloop()
