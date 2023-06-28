@@ -14,7 +14,9 @@
 
 1. 下载[archiv](https://github.com/rcqed/archiv/releases/download/1.0/archiv_v1.0.7z)（国内下载：[archiv](https://gitee.com/rcqed/archiv/releases/download/1.0/archiv_v1.0.7z)）
 
-2. 将归档好的PDF文件放入``archiv``文件夹中，并按"档号__名字"的格式命名卷册名和文件名
+2. 安装[Excle精灵](https://lestore.lenovo.com/detail/L105090)，[Office Excle](https://www.microsoftstore.com.cn/software/office)
+
+3. 将归档好的PDF文件放入``archiv``文件夹中，并按"档号__名字"的格式命名卷册名和文件名
 
 ```
 目录结构如下：
@@ -27,8 +29,8 @@
        ├─XXXXXX-XXXXXX-XX-XXXX-XXX-XXX__文件名4.pdf
 ```
 
-3. ``双击运行.bat``即可
-4. 输出文件在``output``目录下
+4. ``双击运行.bat``即可
+5. 输出文件在``output``目录下
 
 ## 感谢
 
