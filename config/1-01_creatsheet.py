@@ -34,15 +34,16 @@ def write_file_names_to_excel(directory, excel_file):
     # 创建一个新的 Sheet，命名为 "Sheet2"
     sheet2 = workbook.create_sheet("Sheet2")
 
-    # 递归获取指定目录下的所有文件的文件名，忽略"date.txt"
+    # 递归获取指定目录下的所有.pdf或.PDF文件的文件名，忽略"date.txt"
     file_names = []
     for root, dirs, files in os.walk(directory):
         for file in files:
-            file_path = os.path.join(root, file)
-            if file != "date.txt":
-                file_name = os.path.splitext(os.path.basename(file_path))[0]
-                file_names.append(file_name)
-                print(f"正在处理文件: {file_name}")  # 显示当前正在处理的文件
+            if file.lower().endswith(".pdf"):
+                file_path = os.path.join(root, file)
+                if file != "date.txt":
+                    file_name = os.path.splitext(os.path.basename(file_path))[0]
+                    file_names.append(file_name)
+                    print(f"正在处理文件: {file_name}")
     
     # 将文件名写入 Sheet2 的第一列并分列
     for index, file_name in enumerate(file_names, start=1):

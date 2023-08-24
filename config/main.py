@@ -6385,22 +6385,19 @@ def open_website():
     webbrowser.open("https://gitee.com/rcqed/archiv")
 
 root = tk.Tk()
-root.title("日喀则电力公司文件归档小助手v1.0")
+root.title("日喀则电力公司文件归档小助手v2.2")
 root.geometry("400x200")  # 设置窗口宽度和高度
 
 button1 = tk.Button(root, text="加档号页码", command=lambda: open_start_script("1-00_start.py"))
 button1.pack()
 
-button2 = tk.Button(root, text="生成VBA表格", command=lambda: open_start_script("2-00_start.py"))
+button2 = tk.Button(root, text="生成文档", command=lambda: open_start_script("2-00_start.py"))
 button2.pack()
 
-button3 = tk.Button(root, text="VBA自动转文档", command=lambda: open_start_script("3-00_start.py"))
+button3 = tk.Button(root, text="给作者买奶茶", command=open_svg_image)
 button3.pack()
 
-button4 = tk.Button(root, text="给作者买奶茶", command=open_svg_image)
+button4 = tk.Button(root, text="使用说明", command=open_website)
 button4.pack()
-
-button5 = tk.Button(root, text="使用说明", command=open_website)
-button5.pack()
 
 root.mainloop()

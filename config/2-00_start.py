@@ -9,7 +9,29 @@ script_files = [
     "2-04_changelittle.py",
     "2-05_mergerxls1.py",
     "2-06_mergerxls2.py",
-    "2-07_copydel.py"
+    "2-07_copydel.py",
+    "3-00_deldocx.py",
+    "3-01_generatedoc1.py",
+    "3-02_generatedoc2.py",
+    "3-03_generatedoc3.py",
+    "3-04_generatedoc4.py",
+    "3-05_generatedocx_list.py",
+    "3-06_generatedocx_catalog1.py",
+    "3-06_generatedocx_catalog2.py",
+    "3-06_generatedocx_catalog3.py",
+    "3-06_generatedocx_catalog4.py",
+    "3-06_generatedocx_catalog5.py",
+    "3-06_generatedocx_catalog6.py",
+    "3-06_generatedocx_catalog7.py",
+    "3-06_generatedocx_catalog8.py",
+    "3-06_generatedocx_catalog9.py",
+    "3-06_generatedocx_catalog10.py",
+    "3-06_generatedocx_catalog11.py",
+    "3-06_generatedocx_catalog12.py",
+    "3-06_generatedocx_catalog13.py",
+    "3-06_generatedocx_catalog14.py",
+    "3-06_generatedocx_catalog15.py",
+    "3-07_moverm.py"
 ]
 
 # 创建窗口

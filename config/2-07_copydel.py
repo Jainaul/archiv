@@ -18,3 +18,8 @@ for root, dirs, files in os.walk(archive_directory):
         if file == "outputchange.xlsx" or file == "output.xlsx":
             file_path = os.path.join(root, file)
             os.remove(file_path)
+
+# 删除../output/doc文件夹的全部内容（包括文件和子文件夹）
+output_doc_directory = "../output/doc"
+if os.path.exists(output_doc_directory):
+    shutil.rmtree(output_doc_directory)
